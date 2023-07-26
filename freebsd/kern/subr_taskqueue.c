@@ -363,7 +363,7 @@ taskqueue_task_nop_fn(void *context, int pending)
 static int
 taskqueue_drain_tq_queue(struct taskqueue *queue)
 {
-	struct task t_barrier;
+	static struct task t_barrier;
 
 	if (STAILQ_EMPTY(&queue->tq_queue))
 		return (0);

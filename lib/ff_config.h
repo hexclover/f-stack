@@ -136,7 +136,7 @@ struct ff_config {
         char *file_prefix;
 
         /* load an external driver */
-        char *pci_whitelist;
+        char *allow;
 
         int nb_channel;
         int memory;
